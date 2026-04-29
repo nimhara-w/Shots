@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="w-full py-5 px-10">
       <div className="flex flex-row justify-start items-center gap-10">
         <a href="#home">
-          <p className="font-unifrakturcook-bold text-white text-xl"> Shots </p>
+          <p className="font-gothic text-white text-xl"> Shots </p>
         </a>
 
         <ul className="flex flex-row items-center gap-6">
