@@ -1,13 +1,25 @@
 @import "tailwindcss";
 
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&family=Unbounded:wght@200..900&family=UnifrakturCook:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&family=Unbounded:wght@200..900&family=UnifrakturCook:wght@700&display=swap");
+
+.darker-grotesque-font {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.unifrakturcook-bold {
+  font-family: "UnifrakturCook", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
 
 @theme {
   --color-soft-black: #0a0a0a;
   --color-white: #f5f5f0;
-  --font-sans: "Darker Grotesque", sans-serif;
-  --font-fancy: "UnifrakturCook", serif;
+  --font-dark-grotesque: "Darker Grotesque", sans-serif;
+  --font-unifrakturcook-bold: "UnifrakturCook", cursive;
 }
 
 html,
