@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <a href="#home">
+        <a href="#home" className="flex items-center gap-2">
           <p> Shots Coffee </p>
         </a>
 
