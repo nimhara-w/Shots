@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <a href="#home" className="flex-1">
+        <a href="#home">
           <p> Shots Coffee </p>
         </a>
 
