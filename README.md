@@ -1,16 +1,28 @@
-# React + Vite
+# ☕ Shots | Premium Coffee House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-fidelity, immersive web experience designed for Shots. This project serves as a digital sanctuary, allowing guests to explore seasonal roasts, view local café gallery spaces, and experience the brand through fluid, cinematic motion. The site prioritizes a "mood-first" UI, utilizing deep charcoal palettes and silk-smooth GSAP transitions to mirror the slow-pour coffee ritual.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Visual Menu:** A clean, minimal breakdown of artisanal brews with hover-state reveals.
+* **Cinematic Hero:** GSAP-powered entrance sequences that establish a moody, rainy-day atmosphere.
+* **Parallax Gallery:** A "Lookbook" of the café’s interior using smooth scroll-triggered motion.
+* **Tactile Interactions:** Micro-animations on buttons and links to enhance the premium feel.
+* **Responsive Brewing:** A fully optimized experience across all devices, from desktop to mobile.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🏗 Framework & Core
+* **React.js** — Frontend library for a dynamic, component-based UI.
+* **Vite** — High-performance build tool for instant HMR and optimized production builds.
 
-## Expanding the ESLint configuration
+### 🎨 Styling & Motion
+* **Tailwind CSS** — Utility-first styling for a bespoke "dark-roast" aesthetic.
+* **GSAP** — Professional-grade sequencing for smooth, atmospheric transitions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🧩 Toolbox
+* **Lucide React** — Minimalist, consistent iconography.
+* **JavaScript (ES6+)** — Powering the core logic and interactive elements.
+
+---
+*Crafted for the quiet hours.*
