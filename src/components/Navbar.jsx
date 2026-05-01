@@ -8,7 +8,7 @@ const Navbar = () => {
           <p className="font-gothic text-white text-xl"> Shots </p>
         </a>
 
-        <ul className="flex flex-row items-center gap-6">
+        <ul className="font-base flex flex-row items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.id}>
               <a href={`#${link.id}`}>{link.title}</a>
