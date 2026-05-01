@@ -33,12 +33,14 @@ body {
 }
 
 @utility text-gradient {
-  background: linear-gradient(to bottom, #f5f5f0, #4a4a4a);
+  background: linear-gradient(to bottom, #faf9f6, #5a534c);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
 }
 
 .noise {
-  @apply absolute inset-0 h-full w-full object-cover opacity-10 block bg-[url("/bg.jpg")];
+  @apply absolute inset-0 -z-1 size-full bg-cover pointer-events-none bg-[url("/bg.jpg")] opacity-30;
 }
