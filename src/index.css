@@ -40,5 +40,5 @@ body {
 }
 
 .noise {
-  @apply absolute inset-0 -z-10 h-full w-full object-cover opacity-50 bg-[url("/bg.jpg")];
+  @apply absolute inset-0 h-full w-full object-cover opacity-10 block bg-[url("/bg.jpg")];
 }
