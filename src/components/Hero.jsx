@@ -32,7 +32,7 @@ const Hero = () => {
     <>
       <section
         id="hero"
-        className="relative z-20 min-h-dvh w-full border border-transparent"
+        className="relative w-full h-screen overflow-hidden z-20"
       >
         <div className="noise"></div>
 
@@ -46,13 +46,7 @@ const Hero = () => {
 
       <div className="video">
         <div className="absolute inset-0">
-          <video
-            ref={videoRef}
-            src="/output.mp4"
-            muted
-            playsInline
-            preload="auto"
-          />
+          <video ref={videoRef} src="/output.mp4" muted playsInline />
         </div>
       </div>
     </>
