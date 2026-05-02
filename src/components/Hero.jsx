@@ -1,12 +1,38 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
+  const videoRef = useRef();
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
+  useGSAP(() => {
+    const startValue = isMobile ? "top 50%" : "center 40%";
+    const endValue = isMobile ? "120% top" : "bottom top";
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "video",
+        start: startValue,
+        end: endValue,
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration,
+      });
+    };
+  }, []);
+
   return (
     <>
       <section
         id="hero"
-        className="relative z-0 min-h-dvh w-full border border-transparent"
+        className="relative z-20 min-h-dvh w-full border border-transparent"
       >
         <div className="noise"></div>
 
@@ -17,6 +43,18 @@ const Hero = () => {
           Caffienated.
         </h1>
       </section>
+
+      <div className="video">
+        <div className="absolute inset-0">
+          <video
+            ref={videoRef}
+            src="/main.mp4"
+            muted
+            playsInline
+            preload="auto"
+          />
+        </div>
+      </div>
     </>
   );
 };

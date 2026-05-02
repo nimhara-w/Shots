@@ -42,9 +42,9 @@ body {
 }
 
 .noise {
-  @apply absolute inset-0 -z-1 size-full bg-cover pointer-events-none bg-[url("/bg.jpg")] opacity-30;
+  @apply absolute inset-0 -z-10 size-full bg-cover pointer-events-none bg-[url("/bg.jpg")] opacity-30;
 }
 
 .video {
-  @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md: object-bottom object-cover;
+  @apply absolute bottom-0 left-0 w-full h-1/2 md:h-[80%] z-10 object-cover;
 }
