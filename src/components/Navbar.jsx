@@ -25,7 +25,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="w-full py-5 px-10">
+    <nav className="w-full py-5 px-10 fixed top-0 left-0 z-50">
       <div className="flex flex-row justify-start items-center gap-10">
         <a href="#home" className="flex items-center gap-2">
           <img src="/icon.png" alt="logo" className="w-10 h-10" />
