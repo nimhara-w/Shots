@@ -8,7 +8,7 @@ import Hero from "./components/Hero.jsx";
 
 const App = () => {
   return (
-    <main>
+    <main className="main-bg">
       <Navbar />
       <Hero />
     </main>
