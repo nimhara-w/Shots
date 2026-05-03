@@ -34,7 +34,7 @@ const Hero = () => {
         id="hero"
         className="relative w-full h-screen overflow-hidden z-20"
       >
-        <div className="noise"></div>
+        <div className="bg-overlay"></div>
 
         <h1
           id="title"
@@ -45,7 +45,7 @@ const Hero = () => {
       </section>
 
       <div className="video">
-        <div className="absolute inset-0">
+        <div className="padding-top absolute inset-0">
           <video ref={videoRef} src="/output.mp4" muted playsInline />
         </div>
       </div>
