@@ -46,9 +46,9 @@ body {
 }
 
 .video {
-  @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+  @apply absolute inset-0 w-full h-full overflow-hidden z-0;
 }
 
-.main-bg {
-  @apply bg-soft-black -z-50;
+.video video {
+  @apply w-full h-full object-cover;
 }
