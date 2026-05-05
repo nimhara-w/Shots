@@ -2,18 +2,23 @@ import { brewList } from "../../constants/index.js";
 
 const Brews = () => {
   return (
-    <section className="w-full h-screen flex items-center justify-center text-4xl bg-soft-black/90">
+    <section className="w-full h-screen flex items-center justify-center  bg-soft-black/90">
       <div className="list">
         <div className="popular">
-          <h2>Popular Brews</h2>
+          <h2 className="text-6xl text-gradient font-gothic m-12 mb-8">
+            Popular Brews
+          </h2>
 
-          <ul>
+          <ul className="m-12 grid md:grid-cols-2 gap-2">
             {brewList.map(({ name, description, price }) => (
-              <li key={name} className="mb-4">
+              <li
+                key={name}
+                className="ml-12 mb-4 m-px-4 flex items-start gap-4 flex-wrap "
+              >
                 <div className="md:me-28">
-                  <h3>{name}</h3>
-                  <p>{description}</p>
-                  <p>{price}</p>
+                  <h3 className="text-3xl font-base text-white"> {name} </h3>
+                  <p className="text-white text-1xl">{description}</p>
+                  <p className="font-bold text-white"> {price} </p>
                 </div>
               </li>
             ))}
