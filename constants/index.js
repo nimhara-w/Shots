@@ -5,7 +5,7 @@ export const navLinks = [
   { id: "contact", title: "Contact Us" },
 ];
 
-export const brews = [
+export const brewList = [
   {
     name: "Elden Espresso",
     description:
