@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
           src="/output.mp4"
