@@ -6,6 +6,7 @@ import privateImg from "../assets/slider/private.jpg";
 
 import { ChevronLeft } from "lucide-react";
 import { ChevronRight } from "lucide-react";
+import { Circle } from "lucide-react";
 
 const About = () => {
   const slides = [
@@ -26,6 +27,10 @@ const About = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
   };
 
   return (
@@ -64,6 +69,17 @@ const About = () => {
           {/* right arrow */}
           <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <ChevronRight onClick={nextSlide} size={30} />
+          </div>
+          <div className="absolute bottom-7 left-0 right-0 flex gap-2.5 justify-center py-2">
+            {slides.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className="cursor-pointer"
+              >
+                <Circle size={10} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
