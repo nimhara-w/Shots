@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import coffeeImg from "../assets/slider/coffee.jpg";
 import parlorImg from "../assets/slider/parlor.jpg";
 import privateImg from "../assets/slider/private.jpg";
@@ -11,6 +13,20 @@ const About = () => {
     { img: parlorImg, title: "Our Parlor" },
     { img: privateImg, title: "Private Collection" },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
 
   return (
     <div
@@ -38,16 +54,16 @@ const About = () => {
       </div>
       <div className="max-w-[500px] h-[400px] flex w-full m-auto mr-30 py-16 px-4 relative group">
         <div
-          style={{ backgroundImage: `url(${slides[0].img})` }}
+          style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         >
           {/* left arrow */}
           <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <ChevronLeft size={30} />
+            <ChevronLeft onClick={prevSlide} size={30} />
           </div>
           {/* right arrow */}
           <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <ChevronRight size={30} />
+            <ChevronRight onClick={nextSlide} size={30} />
           </div>
         </div>
       </div>
