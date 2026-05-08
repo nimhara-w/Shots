@@ -50,7 +50,7 @@ body {
 }
 
 .sub-content {
-  @apply text-base flex flex-1 w-1/2 text-wrap text-gray-300 text-shadow-2xs ml-15 mt-5 mb-8;
+  @apply text-base flex flex-1 w-5/6 text-wrap text-gray-300 text-shadow-2xs ml-15 mt-5 mb-8;
 }
 
 .badge {

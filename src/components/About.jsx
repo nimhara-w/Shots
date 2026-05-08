@@ -13,8 +13,11 @@ const About = () => {
   ];
 
   return (
-    <div id="about">
-      <div className=" bg-black mb-16 md:px-0 px-5">
+    <div
+      id="about"
+      className="bg-black flex flex-col md:flex-row items-center justify-center relative"
+    >
+      <div className="className: mb-16 md:px-0 px-5">
         <div className="content">
           <div className="md:col-span-8">
             <p className="font-base badge"> Best Coffee</p>
@@ -33,17 +36,17 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+      <div className="max-w-[500px] h-[400px] flex w-full m-auto mr-30 py-16 px-4 relative group">
         <div
           style={{ backgroundImage: `url(${slides[0].img})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         >
           {/* left arrow */}
-          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <ChevronLeft size={30} />
           </div>
           {/* right arrow */}
-          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <ChevronRight size={30} />
           </div>
         </div>
