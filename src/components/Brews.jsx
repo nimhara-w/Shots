@@ -2,7 +2,10 @@ import { brewList } from "../../constants/index.js";
 
 const Brews = () => {
   return (
-    <section className="w-full h-screen flex items-center justify-center  bg-soft-black/90">
+    <section
+      id="brews"
+      className="w-full h-screen flex items-center justify-center  bg-soft-black/90"
+    >
       <div className="list">
         <div className="popular">
           <h2 className="text-6xl text-gradient font-gothic m-12 mb-8">

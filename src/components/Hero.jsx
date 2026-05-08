@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -8,36 +9,28 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const videoRef = useRef();
 
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   useGSAP(() => {
+    const startValue = isMobile ? "top 50%" : "center 60%";
+    const endValue = isMobile ? "160% top" : "bottom top";
+
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "main",
-        start: "center 40%",
-        end: "bottom top",
+        trigger: "video",
+        endTrigger: "#brews",
+        start: startValue,
+        end: endValue,
         scrub: true,
+        pin: true,
       },
     });
-
-    const updateVideo = () => {
-      if (videoRef.current && videoRef.current.duration) {
-        tl.to(
-          videoRef.current,
-          {
-            currentTime: videoRef.current.duration,
-          },
-          0,
-        );
-      }
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration,
+      });
     };
-
-    if (videoRef.current && videoRef.current.readyState > 0) {
-      updateVideo();
-    } else if (videoRef.current) {
-      videoRef.current.addEventListener("loadedmetadata", updateVideo);
-      return () =>
-        videoRef.current?.removeEventListener("loadedmetadata", updateVideo);
-    }
-  }, []);
+  });
 
   return (
     <>
@@ -47,6 +40,7 @@ const Hero = () => {
           src="/output.mp4"
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
         />
       </div>
