@@ -68,11 +68,20 @@ const Reviews = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div id="reviewers" className="bg-black py-16">
-      <h2 className="text-4xl text-gradient font-gothic text-center mb-10">
+      <h2 className="text-4xl md:text-3xl text-gradient font-gothic text-center mb-10">
         What Our Customers Say
       </h2>
       <div className="w-3/5 m-auto shadow-2xs">
