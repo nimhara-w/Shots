@@ -3,7 +3,7 @@ import Hero from "./components/Hero.jsx";
 import Brews from "./components/Brews.jsx";
 import About from "./components/About.jsx";
 import Reviews from "./components/Reviews.jsx";
-import Reservations from "./components/Reservations.jsx";
+import SignUp from "./components/SignUp.jsx";
 import Footer from "./components/Footer.jsx";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Brews />
         <About />
         <Reviews />
-        <Reservations />
+        <SignUp />
         <Footer />
       </div>
     </main>

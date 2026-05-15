@@ -1,4 +1,4 @@
-const Reservations = () => {
+const SignUp = () => {
   return (
     <div className="bg-black md:px-20 px-5 py-16">
       <h2 className="text-4xl text-gradient font-base text-center mb-5">
@@ -35,4 +35,4 @@ const Reservations = () => {
   );
 };
 
-export default Reservations;
+export default SignUp;
