@@ -92,18 +92,25 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[500px] h-[400px] flex w-full m-auto mr-30 py-16 px-4 relative group">
+      <div className="max-w-[500px] h-[400px] flex w-full mx-auto md:mr-30 py-4 md:py-16 px-4 relative group md:mt-10">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         >
           {/* left arrow */}
-          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <ChevronLeft onClick={prevSlide} size={30} />
+          <div
+            onClick={prevSlide}
+            className="block md:hidden group-hover:block absolute top-[50%] -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"
+          >
+            <ChevronLeft size={30} />
           </div>
+
           {/* right arrow */}
-          <div className="hidden group-hover:block absolute top[50%]-translate-x-0 translate-y-[250%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <ChevronRight onClick={nextSlide} size={30} />
+          <div
+            onClick={nextSlide}
+            className="block md:hidden group-hover:block absolute top-[50%] -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"
+          >
+            <ChevronRight size={30} />
           </div>
           <div className="absolute bottom-7 left-0 right-0 flex gap-2.5 justify-center py-2">
             {slides.map((slide, slideIndex) => (
