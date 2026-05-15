@@ -1,7 +1,7 @@
 const Reservations = () => {
   return (
     <div className="bg-black">
-      <h2 className="text-4xl text-gradient font-base text-center mt-10 mb-5">
+      <h2 className="text-4xl text-gradient font-base text-center mb-5">
         Sign Up For Our Mailing List
       </h2>
       <div className="max-w-md mx-auto">

@@ -4,6 +4,7 @@ import Brews from "./components/Brews.jsx";
 import About from "./components/About.jsx";
 import Reviews from "./components/Reviews.jsx";
 import Reservations from "./components/Reservations.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <About />
         <Reviews />
         <Reservations />
+        <Footer />
       </div>
     </main>
   );
