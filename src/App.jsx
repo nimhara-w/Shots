@@ -3,6 +3,7 @@ import Hero from "./components/Hero.jsx";
 import Brews from "./components/Brews.jsx";
 import About from "./components/About.jsx";
 import Reviews from "./components/Reviews.jsx";
+import Reservations from "./components/Reservations.jsx";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Brews />
         <About />
         <Reviews />
+        <Reservations />
       </div>
     </main>
   );

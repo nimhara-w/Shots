@@ -38,7 +38,7 @@ const About = () => {
       id="about"
       className="bg-black flex flex-col md:flex-row items-center justify-center relative"
     >
-      <div className="className: mb-16 md:px-0 px-5">
+      <div className="className: flex flex-col mb-16 md:px-0 px-5">
         <div className="content">
           <div className="md:col-span-8">
             <p className="font-base badge"> Best Coffee</p>
