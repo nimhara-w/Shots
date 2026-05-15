@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import coffeeImg from "../assets/slider/coffee.jpg";
 import parlorImg from "../assets/slider/parlor.jpg";
@@ -9,6 +13,37 @@ import { ChevronRight } from "lucide-react";
 import { Circle } from "lucide-react";
 
 const About = () => {
+  useGSAP(() => {
+    const titleSplit = SplitText.create("#about h2", {
+      type: "words",
+    });
+    const paraSplit = SplitText.create("#about .sub-content p", {
+      type: "words",
+    });
+
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top center",
+      },
+    });
+
+    scrollTimeline.from(titleSplit.words, {
+      opacity: 0,
+      duration: 1,
+      yPercent: 100,
+      ease: "expo.out",
+      stagger: 0.001,
+    });
+    scrollTimeline.from(paraSplit.words, {
+      opacity: 0,
+      duration: 1,
+      yPercent: 100,
+      ease: "expo.out",
+      stagger: 0.001,
+    });
+  });
+
   const slides = [
     { img: coffeeImg, title: "Best Coffee" },
     { img: parlorImg, title: "Our Parlor" },
@@ -38,11 +73,11 @@ const About = () => {
       id="about"
       className="bg-black flex flex-col md:flex-row items-center justify-center relative"
     >
-      <div className="className: flex flex-col mb-16 md:px-0 px-5">
+      <div className="flex flex-col mb-16 md:px-0 px-5">
         <div className="content">
           <div className="md:col-span-8">
             <p className="font-base badge"> Best Coffee</p>
-            <h2 className="text-4xl text-gradient font-base ml-15 mt-5 mb-5">
+            <h2 className="text-4xl text-white text-gradient font-base ml-15 mt-5 mb-5">
               For your eerie coffee experience
               <span className="text-white">-</span> From bean to brew
             </h2>
