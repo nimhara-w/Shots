@@ -1,6 +1,6 @@
 const Reservations = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black md:px-20 px-5 py-16">
       <h2 className="text-4xl text-gradient font-base text-center mb-5">
         Sign Up For Our Mailing List
       </h2>
