@@ -8,9 +8,12 @@ import {
   snackMenu,
 } from "../../constants/index.js";
 
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+
 function MenuItem({ name, price }) {
   return (
-    <div className="flex items-baseline">
+    <div className="fade-text opactity-0 flex items-baseline">
       <span className="w-48 truncate">{name}</span>
       <span className="font-bold">{price}</span>
     </div>
@@ -18,18 +21,28 @@ function MenuItem({ name, price }) {
 }
 
 const Menu = () => {
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".fade-text",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+    );
+  }, []);
+
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-soft-black py-16 px-5">
         <section className="max-w-5xl mx-auto">
-          <h1 className="text-8xl text-gradient font-gothic justify-center flex mt-15 mb-4">
+          <h1 className="fade-text opactity-0 text-8xl text-gradient font-gothic justify-center flex mt-15 mb-4">
             Menu
           </h1>
 
           <div className="flex gap-16 items-start">
             <section>
-              <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mb-8">
                 Hot Coffee
               </h2>
               <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
@@ -43,7 +56,7 @@ const Menu = () => {
               </div>
             </section>
             <section>
-              <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mb-8">
                 Alcoholic Coffee
               </h2>
               <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
@@ -60,7 +73,7 @@ const Menu = () => {
 
           <div className="flex gap-16 items-start">
             <section>
-              <h2 className="text-6xl text-gradient font-base ml-1 mt-10 mb-8">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mt-10 mb-8">
                 Cold Coffee
               </h2>
               <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
@@ -75,7 +88,7 @@ const Menu = () => {
             </section>
 
             <section>
-              <h2 className="text-6xl text-gradient font-base mt-10 ml-1 mb-8">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base mt-10 ml-1 mb-8">
                 Snacks
               </h2>
               <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
