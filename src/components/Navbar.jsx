@@ -29,10 +29,10 @@ const Navbar = () => {
   return (
     <nav className="w-full py-5 px-10 fixed top-0 left-0 z-50">
       <div className="flex flex-row justify-start items-center gap-10">
-        <a href="#home" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img src="/icon.png" alt="logo" className="w-10 h-10" />
-          <p className="font-gothic text-white text-2xl"> Shots </p>
-        </a>
+          <p className="font-gothic text-white text-2xl">Shots</p>
+        </Link>
 
         <ul className="font-base flex flex-row items-center gap-10">
           {navLinks.map((link) => (
