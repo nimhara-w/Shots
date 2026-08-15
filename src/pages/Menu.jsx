@@ -5,6 +5,7 @@ import {
   hotcoffeeDrinks,
   coldCoffeeDrinks,
   alcoholicCoffeeDrinks,
+  snackMenu,
 } from "../../constants/index.js";
 
 function MenuItem({ name, price }) {
@@ -25,6 +26,7 @@ const Menu = () => {
           <h1 className="text-8xl text-gradient font-gothic justify-center flex mt-15 mb-4">
             Menu
           </h1>
+
           <div className="flex gap-16 items-start">
             <section>
               <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
@@ -56,19 +58,43 @@ const Menu = () => {
             </section>
           </div>
 
-          <h2 className="text-6xl text-gradient font-base ml-1 mt-12 mb-8">
-            Cold Coffee
-          </h2>
-          <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
-            {coldCoffeeDrinks.map((drink) => (
-              <MenuItem
-                key={drink.name}
-                name={drink.name}
-                price={drink.price}
-              />
-            ))}
+          <div className="flex gap-16 items-start">
+            <section>
+              <h2 className="text-6xl text-gradient font-base ml-1 mt-10 mb-8">
+                Cold Coffee
+              </h2>
+              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+                {coldCoffeeDrinks.map((drink) => (
+                  <MenuItem
+                    key={drink.name}
+                    name={drink.name}
+                    price={drink.price}
+                  />
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-6xl text-gradient font-base mt-10 ml-1 mb-8">
+                Snacks
+              </h2>
+              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+                {snackMenu.map((snack) => (
+                  <MenuItem
+                    key={snack.name}
+                    name={snack.name}
+                    price={snack.price}
+                  />
+                ))}
+              </div>
+            </section>
           </div>
         </section>
+        <footer className="text-center mt-24 mb-8 opacity-40">
+          <p className="text-sm tracking-widest uppercase font-gothic">
+            &copy; Shots Coffee
+          </p>
+        </footer>
       </main>
       <Footer />
     </>

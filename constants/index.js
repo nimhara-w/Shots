@@ -88,3 +88,16 @@ export const alcoholicCoffeeDrinks = [
   { name: "Baileys Beyond the Fog", price: "$8.90" },
   { name: "Malenia's Amaretto Macchiato", price: "$9.75" },
 ];
+
+export const snackMenu = [
+  { name: "Tarnished Toast", price: "$3.50" },
+  { name: "Grace-Touched Granola Bar", price: "$2.75" },
+  { name: "Erdtree Scone", price: "$4.00" },
+  { name: "Margit's Muffin", price: "$3.25" },
+  { name: "Rennala's Rebirth Roll", price: "$3.75" },
+  { name: "Smoldering Churro", price: "$4.25" },
+  { name: "Ashen Bagel & Schmear", price: "$4.50" },
+  { name: "Rune Bear Claw", price: "$3.90" },
+  { name: "Boiled Prawn Croissant", price: "$4.75" },
+  { name: "Blaidd's Biscotti", price: "$3.40" },
+];
