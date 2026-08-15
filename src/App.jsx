@@ -5,8 +5,10 @@ import About from "./components/About.jsx";
 import Reviews from "./components/Reviews.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Footer from "./components/Footer.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./pages/Menu";
 
-const App = () => {
+const Home = () => {
   return (
     <main className="main-bg relative">
       <div className="relative z-10">
@@ -19,6 +21,17 @@ const App = () => {
         <Footer />
       </div>
     </main>
+  );
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

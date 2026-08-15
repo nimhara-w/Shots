@@ -1,5 +1,7 @@
 import gsap from "gsap";
 
+import { Link } from "react-router-dom";
+
 import { navLinks } from "../../constants/index.js";
 import { useGSAP } from "@gsap/react";
 
@@ -35,7 +37,11 @@ const Navbar = () => {
         <ul className="font-base flex flex-row items-center gap-10">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.id === "menu" ? (
+                <Link to="/menu">{link.title}</Link>
+              ) : (
+                <a href={`#${link.id}`}>{link.title}</a>
+              )}
             </li>
           ))}
         </ul>
