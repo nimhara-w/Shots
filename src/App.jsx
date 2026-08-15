@@ -27,7 +27,6 @@ const Home = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop /> {/* <-- add this */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
