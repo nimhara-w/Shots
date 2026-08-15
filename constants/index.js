@@ -43,3 +43,22 @@ export const brewList = [
     price: "$4.50",
   },
 ];
+
+export const hotcoffeeDrinks = [
+  { name: "Godfrey's Grind", price: "$3.60" },
+  { name: "Elden Espresso", price: "$3.50" },
+  { name: "Malenia's Macchiato", price: "$4.25" },
+  { name: "Dark Souls Drip", price: "$2.50" },
+  { name: "Tarnished Toffee Latte", price: "$4.20" },
+  { name: "Bloodborne Brew", price: "$3.25" },
+  { name: "Gwyn's Golden Roast", price: "$4.60" },
+  { name: "Crowned Cappuccino", price: "$3.75" },
+  { name: "Artorias Americano", price: "$3.40" },
+  { name: "Nameless King Nitro", price: "$4.75" },
+  { name: "Latte of the Ancients", price: "$4.00" },
+  { name: "Miquella's Mocha", price: "$4.30" },
+  { name: "Sekiro Siphon", price: "$4.50" },
+  { name: "Radahn's Ristretto", price: "$3.90" },
+  { name: "Firelink Flat White", price: "$3.85" },
+  { name: "Chosen Undead Cortado", price: "$4.10" },
+];
