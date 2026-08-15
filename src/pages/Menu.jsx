@@ -1,35 +1,40 @@
 import React from "react";
-
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 import { hotcoffeeDrinks } from "../../constants/index.js";
+
+const MenuItem = ({ name, price }) => (
+  <div className="mb-4 text-white flex items-baseline" style={{ gap: "5px" }}>
+    <h3 className="text-sm font-base">{name}</h3>
+    <p className="font-bold text-xs whitespace-nowrap">{price}</p>
+  </div>
+);
 
 const Menu = () => {
   return (
-    <section
-      id="brews"
-      className="w-full min-h-screen flex items-center justify-center  bg-soft-black/90 md: py-16 px-5"
-    >
-      <div className="list">
-        <div className="popular">
-          <h2 className="text-6xl text-gradient font-gothic m-12 mb-8">
-            Popular Brews
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-soft-black py-16 px-5">
+        <section className="max-w-5xl mx-auto">
+          <h1 className="text-8xl text-gradient font-gothic ml-1 mt-10 mb-8">
+            Menu
+          </h1>
+          <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
+            Hot Coffee
           </h2>
-
-          <ul className="m-12 grid md:grid-cols-2 gap-2">
-            {hotcoffeeDrinks.map(({ name, price }) => (
-              <li
-                key={name}
-                className="ml-12 mb-4 m-px-4 flex items-start gap-4 flex-wrap md:gap-5 "
-              >
-                <div className="md:me-28">
-                  <h3 className="text-3xl font-base text-white"> {name} </h3>
-                  <p className="font-bold text-white"> {price} </p>
-                </div>
-              </li>
+          <div className="grid md:grid-cols-2 gap-x-2 gap-y-1">
+            {hotcoffeeDrinks.map((drink) => (
+              <MenuItem
+                key={drink.name}
+                name={drink.name}
+                price={drink.price}
+              />
             ))}
-          </ul>
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 };
 
