@@ -1,7 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import { hotcoffeeDrinks } from "../../constants/index.js";
+import {
+  hotcoffeeDrinks,
+  coldCoffeeDrinks,
+  alcoholicCoffeeDrinks,
+} from "../../constants/index.js";
 
 function MenuItem({ name, price }) {
   return (
@@ -21,11 +25,42 @@ const Menu = () => {
           <h1 className="text-8xl text-gradient font-gothic justify-center flex mt-15 mb-4">
             Menu
           </h1>
-          <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
-            Hot Coffee
+          <div className="flex gap-16 items-start">
+            <section>
+              <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
+                Hot Coffee
+              </h2>
+              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+                {hotcoffeeDrinks.map((drink) => (
+                  <MenuItem
+                    key={drink.name}
+                    name={drink.name}
+                    price={drink.price}
+                  />
+                ))}
+              </div>
+            </section>
+            <section>
+              <h2 className="text-6xl text-gradient font-base ml-1 mb-8">
+                Alcoholic Coffee
+              </h2>
+              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+                {alcoholicCoffeeDrinks.map((drink) => (
+                  <MenuItem
+                    key={drink.name}
+                    name={drink.name}
+                    price={drink.price}
+                  />
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <h2 className="text-6xl text-gradient font-base ml-1 mt-12 mb-8">
+            Cold Coffee
           </h2>
           <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
-            {hotcoffeeDrinks.map((drink) => (
+            {coldCoffeeDrinks.map((drink) => (
               <MenuItem
                 key={drink.name}
                 name={drink.name}

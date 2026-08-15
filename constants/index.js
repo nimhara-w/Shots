@@ -62,3 +62,29 @@ export const hotcoffeeDrinks = [
   { name: "Firelink Flat White", price: "$3.85" },
   { name: "Chosen Undead Cortado", price: "$4.10" },
 ];
+
+export const coldCoffeeDrinks = [
+  { name: "Frostbite Frappe", price: "$4.50" },
+  { name: "Ashen Iced Latte", price: "$4.20" },
+  { name: "Ranni's Cold Brew", price: "$3.75" },
+  { name: "Havel's Iced Americano", price: "$3.50" },
+  { name: "Frozen Flame Frappuccino", price: "$4.90" },
+  { name: "Ordovis' Oat Milk Chill", price: "$4.60" },
+  { name: "Silent Hill Nitro Cold Brew", price: "$4.75" },
+  { name: "Placidusax's Polar Pour", price: "$4.35" },
+  { name: "Yharnam Iced Mocha", price: "$4.40" },
+  { name: "Morgott's Midnight Chiller", price: "$4.10" },
+];
+
+export const alcoholicCoffeeDrinks = [
+  { name: "Irish Ashen One", price: "$8.50" },
+  { name: "Radagon's Rum Roast", price: "$9.00" },
+  { name: "Bourbon of the Abyss", price: "$8.75" },
+  { name: "Godrick's Grafted Grog", price: "$9.25" },
+  { name: "Whiskey Wolnir", price: "$8.60" },
+  { name: "Mohg's Blood Espresso Martini", price: "$10.00" },
+  { name: "Kahlua Knight of Rot", price: "$9.10" },
+  { name: "Amontillado of the Erdtree", price: "$9.50" },
+  { name: "Baileys Beyond the Fog", price: "$8.90" },
+  { name: "Malenia's Amaretto Macchiato", price: "$9.75" },
+];
