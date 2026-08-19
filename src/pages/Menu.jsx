@@ -38,12 +38,12 @@ const Menu = () => {
             Menu
           </h1>
 
-          <div className="flex gap-16 items-start">
-            <section>
-              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mb-8">
+          <div className="flex flex-col md:flex-row gap-16 items-center md:items-start">
+            <section className="max-md:text-center">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 max-md:ml-0 max-md:flex max-md:justify-center mb-2">
                 Hot Coffee
               </h2>
-              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+              <div className="grid md:grid-cols-[max-content_max-content] max-md:justify-items-center gap-x-6 gap-y-1">
                 {hotcoffeeDrinks.map((drink) => (
                   <MenuItem
                     key={drink.name}
@@ -53,11 +53,11 @@ const Menu = () => {
                 ))}
               </div>
             </section>
-            <section>
-              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mb-8">
+            <section className="max-md:text-center">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 max-md:ml-0 mb-2">
                 Alcoholic Coffee
               </h2>
-              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+              <div className="grid md:grid-cols-[max-content_max-content] max-md:justify-items-center gap-x-6 gap-y-1">
                 {alcoholicCoffeeDrinks.map((drink) => (
                   <MenuItem
                     key={drink.name}
@@ -69,12 +69,12 @@ const Menu = () => {
             </section>
           </div>
 
-          <div className="flex gap-16 items-start">
-            <section>
-              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 mt-10 mb-8">
+          <div className="flex flex-col md:flex-row mt-16 gap-16 items-center md:items-start">
+            <section className="max-md:text-center">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 max-md:ml-0 mb-2">
                 Cold Coffee
               </h2>
-              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+              <div className="grid md:grid-cols-[max-content_max-content] max-md:justify-items-center gap-x-6 gap-y-1">
                 {coldCoffeeDrinks.map((drink) => (
                   <MenuItem
                     key={drink.name}
@@ -85,11 +85,11 @@ const Menu = () => {
               </div>
             </section>
 
-            <section>
-              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base mt-10 ml-1 mb-8">
+            <section className="max-md:text-center">
+              <h2 className="fade-text opactity-0 text-6xl text-gradient font-base ml-1 max-md:ml-0 mb-2">
                 Snacks
               </h2>
-              <div className="grid md:grid-cols-[max-content_max-content] gap-x-6 gap-y-1">
+              <div className="grid md:grid-cols-[max-content_max-content] max-md:justify-items-center gap-x-6 gap-y-1">
                 {snackMenu.map((snack) => (
                   <MenuItem
                     key={snack.name}
