@@ -8,7 +8,7 @@ import {
   snackMenu,
 } from "../../constants/index.js";
 
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 
 function MenuItem({ name, price }) {
@@ -21,8 +21,6 @@ function MenuItem({ name, price }) {
 }
 
 const Menu = () => {
-  const menuRef = useRef(null);
-
   useEffect(() => {
     gsap.fromTo(
       ".fade-text",
