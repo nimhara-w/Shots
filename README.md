@@ -2,7 +2,7 @@
 
 A high-fidelity, immersive web experience designed for Shots. This project serves as a digital sanctuary, allowing guests to explore seasonal roasts, view local café gallery spaces, and experience the brand through fluid, cinematic motion. The site prioritizes a "mood-first" UI, utilizing deep charcoal palettes and silk-smooth GSAP transitions to mirror the slow-pour coffee ritual.
 
-## ⭐ View Website: https://shotscoffee.netlify.app/
+# ⭐ View Website: https://shotscoffee.netlify.app/
 
 ## ✨ Features
 
